@@ -133,10 +133,10 @@
       line: 'ExecStart=/usr/lib/bluetooth/bluetoothd --noplugin=sap'
       state: present
   - name: Update Raspbian keyring
-     apt:
-       name: raspbian-archive-keyring
-       state: latest
-       update_cache: yes
+    apt:
+      name: raspbian-archive-keyring
+      state: latest
+      update_cache: yes
 
    - name: Update Kali Archive GPG key
      apt_key:
