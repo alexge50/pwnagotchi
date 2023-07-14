@@ -138,16 +138,16 @@
       state: latest
       update_cache: yes
 
-   - name: Update Kali Archive GPG key
-     apt_key:
-       url: https://archive.kali.org/archive-key.asc
-       state: present
+  - name: Update Kali Archive GPG key
+    apt_key:
+     url: https://archive.kali.org/archive-key.asc
+     state: present
 
-   - name: Import re4son-kernel GPG key
-     apt_key:
-       keyserver: keyserver.ubuntu.com
-       id: 11764EE8AC24832F
-       state: present
+  - name: Import re4son-kernel GPG key
+   apt_key:
+     keyserver: keyserver.ubuntu.com
+     id: 11764EE8AC24832F
+     state: present
        
   - name: Add re4son-kernel repository
     apt_repository:
