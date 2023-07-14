@@ -5,7 +5,7 @@
       "type": "arm-image",
       "iso_url": "https://downloads.raspberrypi.org/raspios_oldstable_lite_armhf/images/raspios_oldstable_lite_armhf-2022-09-26/2022-09-22-raspios-buster-armhf-lite.img.xz",
       "iso_checksum": "1137a22085b821da7395ed8a4eb4ac65b7835bbe",
-      "target_image_size": 7221225472
+      "target_image_size": 5368709120
     }
   ],
   "provisioners": [
