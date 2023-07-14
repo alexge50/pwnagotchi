@@ -144,7 +144,7 @@
      state: present
 
   - name: Import re4son-kernel GPG key
-   apt_key:
+    apt_key:
      keyserver: keyserver.ubuntu.com
      id: 11764EE8AC24832F
      state: present
