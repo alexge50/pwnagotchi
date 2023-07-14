@@ -132,14 +132,9 @@
       line: 'ExecStart=/usr/lib/bluetooth/bluetoothd --noplugin=sap'
       state: present
 
-  - name: Add re4son-kernel repo key
-    apt_key:
-      url: https://re4son-kernel.com/keys/http/archive-key.asc
-      state: present
-
   - name: Add re4son-kernel repository
     apt_repository:
-      repo: deb http://http.re4son-kernel.com/re4son/ kali-pi main
+      repo: deb [ allow-insecure=yes ] http://http.re4son-kernel.com/re4son/ kali-pi main
       state: present
 
   - name: create /etc/apt/preferences.d/kali.pref
@@ -175,6 +170,7 @@
   - name: install packages
     apt:
       name: "{{ packages.apt.install }}"
+      allow_unauthenticated: true
       state: present
 
   - name: configure dphys-swapfile
